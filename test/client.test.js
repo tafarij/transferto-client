@@ -48,13 +48,29 @@ test('sendRequest - should send its args as query params', t => {
 
 test('sendRequest - should parse comma separated values to json array', t => {
     const expectedFoo = ['1', '2', '3', '4', '5'];
+    const excluded = {
+        promotion: 'this, should not split, ever',
+        sms: 'sms, should, not split to array',
+        infotText: 'this neither, it really should not'
+    };
 
-    createNock().reply(200, `foo=1,2,3,4,5\r\n${successResponse}`);
+    const response = [
+        'foo=1,2,3,4,5',
+        `promotion=${excluded.promotion}`,
+        `sms=${excluded.sms}`,
+        `info_txt=${excluded.infotText}`,
+        successResponse
+    ].join('\r\n');
+
+    createNock().reply(200, response);
 
     client.sendRequest({ bar: 'bar' })
         .then(data => {
             t.ok(data.foo);
             t.same(data.foo, expectedFoo);
+            t.same(data.promotion, excluded.promotion);
+            t.same(data.sms, excluded.sms);
+            t.same(data.info_txt, excluded.infotText);
             t.end();
         });
 });
