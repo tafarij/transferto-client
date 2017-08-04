@@ -6,7 +6,7 @@ const client = require('../')('fake-login', 'fake-token');
 const successResponse = 'error_code=0\r\nerror_txt=success';
 
 const createNock = () => {
-    return nock('https://fm.transfer-to.com')
+    return nock('https://airtime.transferto.com')
         .get('/cgi-bin/shop/topup')
         .query(true);
 };
