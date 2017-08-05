@@ -2,6 +2,14 @@
   "name": "transferto-client",
   "version": "1.0.0",
   "description": "A node.js wrapper around the Transfer-To API",
+  "homepage": "https://github.com/tafarij/transferto-client",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tafarij/transferto-client"
+  },
+  "bugs": {
+    "url": "https://github.com/tafarij/transferto-client/issues"
+  },
   "main": "index.js",
   "scripts": {
     "lint": "eslint --cache .",
@@ -9,7 +17,8 @@
     "test-dev": "tap test/*.test.js --cov --coverage-report=lcov"
   },
   "keywords": [
-    "TransferTo"
+    "TransferTo",
+    "topup"
   ],
   "author": "Tafari Johnson <dev.fyah@gmail.com> (http://tafarijohnson.com)",
   "license": "MIT",
