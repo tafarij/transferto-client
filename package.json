@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint --cache .",
-    "test": "tap test/*.test.js --cov --coverage-report=lcov"
+    "test": "tap test/*.test.js --coverage",
+    "test-dev": "tap test/*.test.js --cov --coverage-report=lcov"
   },
   "keywords": [
     "TransferTo"
