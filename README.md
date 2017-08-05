@@ -1,5 +1,8 @@
 # transferto-client
 
+[![Build Status](https://travis-ci.org/tafarij/transferto-client.svg?branch=master)](https://travis-ci.org/tafarij/transferto-client)
+[![Coverage Status](https://coveralls.io/repos/github/tafarij/transferto-client/badge.svg?branch=master)](https://coveralls.io/github/tafarij/transferto-client?branch=master)
+
 This is a simple node.js wrapper around the transfer-to.com mobile topup/recharge API. It provies a function (sendRequest) to execute any API call, but it also provides a few other helper functions.
 
 ## Summary
