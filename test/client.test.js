@@ -231,3 +231,21 @@ test('topup - simulation and currency', t => {
     client.topup(topupData)
         .then(_ => t.end());
 });
+
+// SPREADS
+test('getCountries - spreads', t => {
+    createNock()
+        .reply(200, uri => {
+            const query = url.parse(uri, true).query;
+
+            t.equal(query.action, 'pricelist');
+            t.equal(query.info_type, 'countries');
+
+            return successResponse;
+        });
+
+    const { getCountries } = client;
+    getCountries()
+        .then(_ => t.end())
+        .catch(t.threw);
+});
