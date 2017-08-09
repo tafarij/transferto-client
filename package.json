@@ -1,6 +1,6 @@
 {
   "name": "transferto-client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A node.js wrapper around the Transfer-To API",
   "homepage": "https://github.com/tafarij/transferto-client",
   "repository": {
