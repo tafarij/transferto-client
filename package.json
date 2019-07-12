@@ -23,7 +23,7 @@
   "author": "Tafari Johnson <dev.fyah@gmail.com> (http://tafarijohnson.com)",
   "license": "MIT",
   "dependencies": {
-    "request": "^2.81.0",
+    "request": "^2.88.0",
     "request-promise-native": "^1.0.4"
   },
   "devDependencies": {
